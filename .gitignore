@@ -1,0 +1,14 @@
+#NuGet packages 
+packages  
+ 
+#Binaries 
+bin 
+obj  
+ 
+#NCrunch 
+*.ncrunchsolution 
+*.ncrunchproject  
+ 
+#Visual Studio 
+*.suo 
+
