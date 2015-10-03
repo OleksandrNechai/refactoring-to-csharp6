@@ -12,14 +12,6 @@ namespace CSharp6Demo
         static void Main()
         {
         }
-
-        public static void CheckForNull<T>(T val, string name) where T : class
-        {
-            if (val == null)
-            {
-                throw new ArgumentNullException(name);
-            }
-        }
     }
 
     class Circle
@@ -44,7 +36,8 @@ namespace CSharp6Demo
 
         public Circle(Point centre, double radius)
         {
-            Program.CheckForNull(centre, "centre");
+            if(centre==null)
+                throw new ArgumentNullException("centre");
             this._centre = centre;
             this._radius = radius;
         }
