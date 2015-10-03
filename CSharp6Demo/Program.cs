@@ -40,14 +40,12 @@ namespace CSharp6Demo
         {
             get { return _centre; }
         }
-
         private readonly Point _centre = new Point(0, 0);
 
         public double Radius
         {
             get { return _radius; }
         }
-
         private readonly double _radius = 1.0;
 
         public Circle()
@@ -93,10 +91,7 @@ namespace CSharp6Demo
     }
 
     class Point
-    {
-        private readonly double _x;
-        private readonly double _y;
-
+    {        
         public Point(double x, double y)
         {
             this._x = x;
@@ -110,6 +105,8 @@ namespace CSharp6Demo
                 return _x;
             }
         }
+        private readonly double _x;
+
         public double Y
         {
             get
@@ -117,6 +114,7 @@ namespace CSharp6Demo
                 return _y;
             }
         }
+        private readonly double _y;
 
         public override string ToString()
         {
