@@ -23,8 +23,9 @@ namespace CSharp6Demo
             {
                 if (e.Message.Contains("An item with the same key has already been added."))
                 {
-                    Console.WriteLine("Yes, we now we can not add same key twi");
+                    Console.WriteLine("Yes, we now we can not add same key twice");
                 }
+                throw;
             }
 
             circlesDictionary
