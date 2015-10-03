@@ -47,7 +47,6 @@ namespace CSharp6Demo
         public void MovingCircleToDefinedPoint()
         {
             var text = "";
-            Action<string> printer = (input) => text = input;
             var c1 = new Circle(new Point(0, 0), 2);
             var c2 = new Circle(new Point(1, 1), 2);
 
