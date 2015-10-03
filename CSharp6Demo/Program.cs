@@ -49,17 +49,6 @@ namespace CSharp6Demo
             this._radius = radius;
         }
 
-        public Circle(string input)
-        {
-            var array = input.Split(',');
-            double x, y, radius;
-            double.TryParse(array[0], out x);
-            double.TryParse(array[0], out y);
-            double.TryParse(array[0], out radius);
-            _centre = new Point(x, y);
-            _radius = radius;
-        }
-
         public static Circle FromDatabaseData(Point centre, double radius)
         {
             double x = 0, y = 0;

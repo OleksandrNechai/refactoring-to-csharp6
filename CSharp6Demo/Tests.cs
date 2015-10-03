@@ -59,13 +59,5 @@ namespace CSharp6Demo
             var c = new Circle(new Point(0, 0), 1);
             Assert.That(c.Area,Is.EqualTo(Math.PI));
         }
-        [Test]
-        public void CreationFromString()
-        {
-            var text = "";
-            Action<string> printer = (input) => text = input;
-            new Circle("1,1,1").Print(printer);
-            Assert.That(text, Is.EqualTo("Centre coordinates: (1,1), Radius: 1"));
-        }
     }
 }
