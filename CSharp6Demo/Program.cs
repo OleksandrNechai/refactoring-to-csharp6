@@ -1,11 +1,36 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CSharp6Demo
 {
     class Program
     {
-        static void Main()
+        private static void Main()
         {
+            var circlesDictionary = new Dictionary<int, Circle>
+            {
+                {1, new Circle(centre: new Point(0, 0), radius: 1)},
+                {2, new Circle(centre: new Point(2, 2), radius: 5)},
+                {3, new Circle(centre: new Point(1, 2), radius: 2)}
+            };
+
+            try
+            {
+                circlesDictionary.Add(3, null);
+            }
+            catch (Exception e)
+            {
+                if (e.Message.Contains("An item with the same key has already been added."))
+                {
+                    Console.WriteLine("Yes, we now we can not add same key twi");
+                }
+            }
+
+            circlesDictionary
+                .Select(c => c.Value.Area)
+                .ToList()
+                .ForEach(Console.WriteLine);
         }
     }
 
@@ -31,7 +56,7 @@ namespace CSharp6Demo
 
         public Circle(Point centre, double radius)
         {
-            if(centre==null)
+            if (centre == null)
                 throw new ArgumentNullException("centre");
             this._centre = centre;
             this._radius = radius;
