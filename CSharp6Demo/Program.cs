@@ -25,7 +25,10 @@ namespace CSharp6Demo
                 {
                     Console.WriteLine("Yes, we now we can not add same key twice");
                 }
-                throw;
+                else
+                {
+                    throw;
+                }
             }
 
             circlesDictionary
